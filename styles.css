@@ -100,11 +100,84 @@ header a:hover {
 
 main {
     background-color: var(--color-background);
-    height: calc(100vh - 60px);
+    height: calc(100vh - 60px - 40px);
     margin-top: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     color: var(--color-primary)
+}
+
+.intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: -150px;
+    width: 100%;
+}
+
+.hire-me {
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+}
+
+.hire-me a {
+    width: 150px;
+    height: 50px;
+    border-radius: 30%;
+    border: 2px solid var(--color-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: var(--color-primary);
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.hire-me a:hover {
+    color: var(--color-text);
+    background-color: var(--color-nav-item-hover);
+    animation: pulse 0.5s ease infinite;
+}
+
+footer {
+    display: flex;
+    background-color: var(--color-background);
+    color: var(--color-nav-item);
+    height: 40px;
+    font-weight: 900;
+}
+
+
+#footer-name {
+    display: flex;
+    align-items: center;
+    flex: 3 auto;
+    justify-content: center;;
+}
+
+#footer-spacer {
+    flex: 14 auto;
+}
+
+#footer-date {
+    display: flex;
+    align-items: center;
+    flex: 3 auto;
+    justify-content: center;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    
 }
