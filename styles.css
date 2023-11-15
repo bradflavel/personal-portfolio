@@ -28,8 +28,9 @@ body {
     font-family: Poppins, sans-serif;
 }
 
-h1 {
+.intro h1 {
     font-size: 72px;
+    text-align: center;
 }
 
 h3 {
@@ -52,6 +53,27 @@ header {
     padding: 0 30px; 
     background-color: var(--color-background);
     color: var(--color-nav-item)
+}
+
+main {
+    background-color: var(--color-background);
+    height: calc(100vh - 40px);
+    padding-top: 60px;
+    color: var(--color-primary);
+    width: 100%;
+}
+
+footer {
+    display: flex;
+    background-color: var(--color-background);
+    color: var(--color-nav-item);
+    height: 40px;
+    font-weight: 900;
+}
+
+.page-title {
+    margin-top: 50px;
+    text-align: center;
 }
 
 header h4 {
@@ -98,15 +120,13 @@ header a:hover {
     color: white;
 }
 
-main {
-    background-color: var(--color-background);
-    height: calc(100vh - 60px - 40px);
-    margin-top: 60px;
+
+
+#home-page {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    color: var(--color-primary)
 }
 
 .intro {
@@ -114,7 +134,7 @@ main {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: -150px;
+    
     width: 100%;
 }
 
@@ -145,13 +165,7 @@ main {
     animation: pulse 0.5s ease infinite;
 }
 
-footer {
-    display: flex;
-    background-color: var(--color-background);
-    color: var(--color-nav-item);
-    height: 40px;
-    font-weight: 900;
-}
+
 
 
 #footer-name {
