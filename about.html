@@ -8,10 +8,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    
 </head>
 <body>
     <header>
-        <h4 class="name">Brad</h4>
+        <h4 class="name">B.F.</h4>
         <nav class="nav-bar">
             <ul class="nav-menu">
                 <li class="nav-item"><a href="index.html" id="HOME">HOME</a></li>
@@ -24,11 +25,52 @@
     </header>
     <main>
         <h1 class="page-title">About Me</h1>
+        <div class="container">
+            <div class="menu">
+                <button class="menu-item" data-section="bio" onclick="changeContent('bio')">Bio</button>
+                <button class="menu-item" data-section="experience" onclick="changeContent('experience')">Work Experience</button>
+                <button class="menu-item" data-section="interests" onclick="changeContent('interests')">Hobbies & Interests</button>
+            </div>
+            <div class="content">
+                <div id="bio" class="content-section">
+                    <h2>Bio</h2>
+                    <p class="bio-text" id="section-one">I've always had an interest in computers. Going onto our old family computer and playing Solitaire and Pinball got me addicted.
+                                I was around 11 years old when I was enrolled in a Junior Digital Media bootcamp which taught me basic HTML. Whilst others followed the teacher and
+                                only worked on it at class, I kept on working on it at home, looking up cool things to add. 
+                    </p>
+                    <p class="bio-text" id="section-two">Fast forward to today, and I love being able to create things from scratch that can simplify a task. Python projects are a favourite of mine,
+                        however I do enjoy creating responsive websites that are visually appealing. 
+                    </p>
+                </div>
+                <div id="experience" class="content-section" style="display: none;">
+                    <h2>Experience</h2>
+                    <p class="experience-text" id="section-one">My first job was working as a nightfill staff member for a local supermarket whilst in high school. After graduating high school, I took
+                        multiple customer service jobs over the next 12 or so years, learning how to critically think and problem solve. I truly believe these experiences have helped me to become a
+                        better developer.
+                </p>
+                <p class="experience-text" id="section-two">Now that I've mastered the art of complaint resolution, it's definitely time to start the career I've always wanted to have.
+                    Currently studying a Bachelor of Information Technology (Computer Science) at the Queensland University of Technology, I'm excited for what's to come and the knowledge I'll
+                    gain.
+            </p>
+                </div>
+                <div id="interests" class="content-section" style="display: none;">
+                    <h2>Interests</h2>
+                    <p class="interests-text" id="section-one">I've always had an interest in computers. Going onto our old family computer and playing Solitaire and Pinball got me addicted.
+                        I was around 11 years old when I was enrolled in a Junior Digital Media bootcamp which taught me basic HTML. Whilst others followed the teacher and
+                        only worked on it at class, I kept on working on it at home, looking up cool things to add. 
+                </p>
+                <p class="interests-text" id="section-two">Fast forward to today, and I love being able to create things from scratch that can simplify a task. Python projects are a favourite of mine,
+                    however I do enjoy creating responsive websites that are visually appealing. 
+                </p>
+                </div>
+            </div>
+        </div>
     </main>
     <footer>
         <p id="footer-name">Brad Flavel</p>
         <p id="footer-spacer"></p>
         <p id="footer-date">© 2023</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>

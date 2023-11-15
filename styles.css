@@ -26,6 +26,7 @@ html {
 body {
     width: 100%;
     font-family: Poppins, sans-serif;
+    background: var(--color-background)
 }
 
 .intro h1 {
@@ -56,11 +57,12 @@ header {
 }
 
 main {
-    background-color: var(--color-background);
+    background-color: transparent;
     height: calc(100vh - 40px);
     padding-top: 60px;
     color: var(--color-primary);
     width: 100%;
+    animation: fadeIn 1s ease;
 }
 
 footer {
@@ -113,11 +115,15 @@ header a {
     padding: 0 20px;
     height: 100%;
     width: 100%;
+    font-size: 20px;
+    letter-spacing: 6px;
 }
 
 header a:hover {
-    background-color: var(--color-nav-item-hover);
-    color: white;
+    background-color: transparent;
+    box-shadow: 0 0 50px var(--color-tertiary);
+    text-shadow: 0 0 50px var(--color-tertiary);
+    color: var(--color-tertiary)
 }
 
 
@@ -127,6 +133,7 @@ header a:hover {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    animation: fadeIn 1s ease;
 }
 
 .intro {
@@ -134,8 +141,19 @@ header a:hover {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    
     width: 100%;
+}
+
+.intro h1 span {
+    color: var(--color-secondary); /* Neon Pink/Magenta */
+}
+
+.intro h1 {
+    text-shadow: 0 0 5px var(--color-secondary), 0 0 10px var(--color-secondary);
+}
+
+.intro h3 {
+    font-style: italic;
 }
 
 .hire-me {
@@ -149,20 +167,26 @@ header a:hover {
     width: 150px;
     height: 50px;
     border-radius: 30%;
-    border: 2px solid var(--color-primary);
     display: flex;
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    color: var(--color-primary);
-    font-weight: 800;
+    font-weight: 900;
     letter-spacing: 3px;
+    background-color: transparent;
+    box-shadow: 0 0 5px var(--color-secondary), 0 0 10px var(--color-secondary);
+    color: var(--color-secondary);
+    transition: all 0.3s ease;
 }
 
+
+
 .hire-me a:hover {
-    color: var(--color-text);
-    background-color: var(--color-nav-item-hover);
     animation: pulse 0.5s ease infinite;
+    background-color: var(--color-background);
+    color: var(--color-tertiary);
+    border-color: var(--color-tertiary);
+    box-shadow: 0 0 10px var(--color-tertiary), 0 0 20px var(--color-tertiary);
 }
 
 
@@ -186,6 +210,98 @@ header a:hover {
     justify-content: center;
 }
 
+.container {
+    width: 50%;
+    min-width: 450px;
+    height: 70%;
+    margin: 80px auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.about-me {
+    display: flex;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 20%;
+    height: 100%;
+}
+
+.menu-item {
+    border: none;
+    outline: none;
+    flex: 1 auto;
+    background-color: var(--color-background);
+    box-shadow: 0 0 10px var(--color-primary), 0 0 20px var(--color-primary);
+    color: var(--color-nav-item);
+    font-family: Poppins, sans-serif;
+    font-weight: 900;
+    font-size: 20px;
+    padding: 0 20px;
+    margin:10px;
+}
+
+.content {
+    flex-basis: 80%;
+    margin: 10px 30px;
+    box-shadow: 0 0 10px var(--color-secondary), 0 0 20px var(--color-secondary);
+}
+
+.content-section {
+    display: none;
+    color: var(--color-secondary);
+    padding: 60px 20%;
+    font-style: italic;
+    animation: fadeIn 1s ease;
+}
+
+.content-section p {
+    font-size: calc(0.3vw + 9px);
+}
+
+@media only screen and (max-width: 1200px) {
+    .content-section p {
+        font-size: 11px;
+    }
+    .content-section {
+        padding: 60px 15%;
+    }
+    
+}
+
+@media only screen and (max-width: 950px) {
+    .container {
+        width: 60%;
+    }
+    .content-section {
+        padding: 60px 10%;
+    }
+}
+
+.menu-item:hover {
+    cursor: pointer;
+    color: var(--color-tertiary);
+    box-shadow: 0 0 10px var(--color-tertiary), 0 0 20px var(--color-tertiary);
+}
+
+.menu-item:active {
+    cursor: pointer;
+    color: var(--color-secondary);
+    box-shadow: 0 0 10px var(--color-secondary), 0 0 20px var(--color-secondary);
+}
+
+
+.content-section p:not(:first-of-type) { 
+    padding-top: 20px;
+} 
+
+.content-section h2 {
+    margin-bottom: 20px;
+}
+
 @keyframes pulse {
     0%, 100% {
         transform: scale(1);
@@ -194,4 +310,22 @@ header a:hover {
         transform: scale(1.1);
     }
     
+}
+
+@keyframes gradientAnimation {
+    0%, 100% {
+        background-position: 100% 50%;
+    }
+    50% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
