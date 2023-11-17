@@ -8,37 +8,45 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/SplitText.min.js"></script>
 </head>
 <body>
     <div class="canvas">
-        <header>
-            <h4 class="name">B.F.</h4>
-            <nav class="nav-bar">
-                <ul class="nav-menu">
-                    <li class="nav-item"><a href="index.html" id="HOME">HOME</a></li>
-                    <li class="nav-item"><a href="about.html" id="ABOUT">ABOUT</a></li>
-                    <li class="nav-item"><a href="skills.html" id="SKILLS">SKILLS</a></li>
-                    <li class="nav-item"><a href="projects.html" id="PROJECTS">PROJECTS</a></li>
-                    <li class="nav-item"><a href="contact.html" id="CONTACT">CONTACT</a></li>
-                </ul>
-            </nav>
-        </header>
-        <main id="home-page">
-            <div class="intro">
-                <h1>Hi, I'm <span>Brad</span></h1>
-                <h3>A Web Developer</h3>
-            </div>
-            <div class="hire-me">
-                <a href="https://www.linkedin.com/in/brad-f-643079b5/" id="linked-in-profile" target="_blank">LINKEDIN</a>
-                <a href="https://github.com/bradflavel" id="github-profile" target="_blank">GITHUB</a>
-            </div>
-        </main>
-        <footer>
-            <p id="footer-name">Brad Flavel</p>
-            <p id="footer-spacer"></p>
-            <p id="footer-date">© 2023</p>
-        </footer>
+        <nav style="position: fixed; top: 0; width: 100%;">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    
+        <!-- Home Section -->
+        <section id="home">
+            <h1>Welcome to My Portfolio</h1>
+            <p>This is the home section.</p>
+        </section>
+    
+        <!-- About Section -->
+        <section id="about">
+            <h2>About Me</h2>
+            <p>This section will contain information about me.</p>
+        </section>
+    
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2>Projects</h2>
+            <p>This section will showcase my projects.</p>
+        </section>
+    
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Information on how to contact me.</p>
+        </section>
     </div>
     <script src="script.js"></script>
+    
 </body>
 </html>

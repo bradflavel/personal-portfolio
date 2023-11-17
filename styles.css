@@ -2,6 +2,7 @@
     --color-primary: #00A7E1; /* Vibrant Tech Blue */
     --color-secondary: #FF007F; /* Neon Pink/Magenta */
     --color-tertiary: #7CFFCB; /* Bright Neon Green/Cyan */
+    --color-quaternary: #C400FF; /* Vibrant Neon Purple */
     --color-background: #0A0F0D; /* Dark Near-Black */
     --color-text: #D1D4D1; /* Lighter Grey */
     --color-text-secondary: #A6A9A6; /* Medium Grey */
@@ -347,3 +348,10 @@ header a:hover {
     border: 1px solid; /* Optional, adds a subtle border */
     pointer-events: none;
 }
+
+.bar {
+    width:3px;
+    height:49px;
+    position:absolute;
+    top:-1px;
+  }
