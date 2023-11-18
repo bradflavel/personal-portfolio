@@ -1,3 +1,9 @@
+:root {
+    --color-primary: #00A7E1;
+    --color-secondary: #FF007F;
+    --color-tertiary: #7CFFCB;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -13,23 +19,23 @@ section {
     width: 100%;
     background-size: cover;
     background-position: center;
+    padding-top: 60px;
 }
 
 section:first-of-type {
-    padding-top: 60px;
-    background-image: url(Images/cyberpunk-city-wallpaper-320416450.png);
+    background-image: url(Images/background-1.jpg);
 }
 
 section:nth-of-type(2) {
-    background-image: url(Images/cyberpunk-city-wallpaper-320416450\ \(1\).png);
+    background-image: url(Images/background-2.jpg);
 }
 
 section:nth-of-type(3) {
-    background-image: url(Images/cyberpunk-city-wallpaper-320416450\ \(2\).png);
+    background-image: url(Images/background-3.jpg);
 }
 
 section:nth-of-type(4) {
-    background-image: url(Images/cyberpunk-city-wallpaper-320416450\ \(3\).png);
+    background-image: url(Images/background-4.jpg);
 }
 
 main {
@@ -42,15 +48,29 @@ main {
 }
 
 .left-container {
-    width: 40%;
+    width: 50%;
+    min-width: 300px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: white;
 }
 
 .right-container {
-    width: 60%;
+    min-width: 300px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#portrait-photo {
+    width: 50%;
+    min-width: 200px;
+    object-fit: contain;
+    opacity: 50%;
+    border-radius: 100%;
 }
 
 .header {
@@ -78,21 +98,75 @@ main {
     ;
 }
 
+a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 4px;
+    font-weight: 900;
+}
+
 .header a {
     height: 100%;
     width: 100%;
-    display: flex;
-    align-items: center;
     color: white;
-    letter-spacing: 4px;
 }
 
 #page-title {
     font-size: 72px;
     text-align: center;
+}
+
+.section-title {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 48px;
+    letter-spacing: 8px;
+}
+
+section p, .section-title, #page-title {
     color: white;
 }
 
-section p, .section-title {
-    color: white;
+.contact-button {
+    height: 60px;
+    color: var(--color-tertiary);
+    background-color: black;
+    border-radius: 15%;
+    margin-top: 35px;
+    box-shadow: 0px 0px 10px 1px var(--color-tertiary), inset 0px 0px 10px 1px var(--color-tertiary);
+    padding: 10px;
+}
+
+#contact-me {
+    width: 50%;
+    text-align: center;
+}
+
+.button-row {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+#linkedin, #github {
+    width: 30%;
+}
+
+.contact-button:hover {
+    box-shadow: 0px 0px 10px 1px var(--color-secondary), inset 0px 0px 10px 1px var(--color-secondary);
+    color: var(--color-secondary);
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
